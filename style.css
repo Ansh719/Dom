@@ -1,0 +1,168 @@
+body {
+    background-color: #121212;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    margin-bottom: 50px;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+#greeting {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(225, 255, 255, 0.2);
+    margin: 0;
+}
+
+.boxes{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.color-box {
+    width: 120px;
+    height: 120px;
+    background-color: #1e1e24;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.color-box:hover {
+    transform: translateX(-5px);
+}
+
+.color-box.is-circle {
+    border-radius: 50%;
+    transform: scale(0.95);
+}
+
+.input-container {
+    display: flex;
+    gap: 15px;
+}
+
+#name-input {
+    padding: 12px 20px;
+    background-color: #1e1e24;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#name-input:focus {
+    border-color: #00d2d3;
+    box-shadow: 0 0 15px rgba(0, 210, 211, 0.3);
+}
+
+#greet-btn {
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #00d2d3;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 210, 211, 0.2), inset 0 0 10px rgba(0, 210, 211, 0.1);
+}
+
+#greet-btn:hover {
+    background-color: #00d2d3;
+    color: #121212;
+    box-shadow: 0 0 25px rgba(0, 210, 211, 0.6), inset 0 0 15px rgba(0, 210, 211, 0.4);
+}
+
+#greet-btn {
+    font-family: 'Poiret One',cursive, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+
+    body{
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+
+    header {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    #greeting-text {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 85%;
+        max-width: 350px;
+        margin-bottom: 40px;
+    }
+
+    .color-box {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 20px;
+        font-size: 1.2rem;
+    }
+
+    .input-container {
+        flex-direction: column;
+        width: 85%;
+        max-width: 350px;
+        gap: 15px;
+    }
+
+    #name-input {
+        width: 100%;
+        padding: 16px;
+        font-size: 1.2rem;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    #greet-btn {
+        width: 100%;
+        padding: 16px;
+        border-radius: 12px;
+        letter-spacing: 4px;
+        font-size: 1.2rem;
+    }
+}
